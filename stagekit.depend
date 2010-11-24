@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1290560319 source:/home/wayne/programming/stagekit/rumble.c
+	<stdio.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	<sys/ioctl.h>
+	<errno.h>
+	"rumble.h"
+	"stagekit.h"
+	<linux/input.h>
+
+1290578680 source:/home/wayne/programming/stagekit/main.c
+	<stdio.h>
+	<stdlib.h>
+	"stagekit.h"
+
+1290560018 /home/wayne/programming/stagekit/rumble.h
+
+1290578899 /home/wayne/programming/stagekit/stagekit.h
+	<unistd.h>
+
+1290568377 source:/home/wayne/programming/stagekit/stagekit.c
+	<stdio.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	<sys/ioctl.h>
+	<errno.h>
+	"stagekit.h"
+	<linux/input.h>
+

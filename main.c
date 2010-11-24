@@ -5,14 +5,15 @@
 int main()
 {
     int i;
-    unsigned char j;
+    unsigned int color;
+    unsigned int k;
     printf("Initializing StageKit...\n");
     sk_init(NULL);
     printf("0 - Panic\n1-5 - Strobe\n6 - Set red lights\n7 - Set yellow lights\n8 - Set green lights\n9 - Set blue lights\n10 - Fog on\n11 - Fog off\n");
     while (i!=-1)
     {
         if(scanf("%i", &i)==EOF)
-            return;
+            return 0;
 
         switch(i)
         {
@@ -42,27 +43,27 @@ int main()
                 break;
             case 6:
                 printf("Enter a value (in hex) for the red lights:");
-                scanf("%x", &j);
-                sk_setred(j);
-                printf("Sent %x to the red array\n",j);
+                scanf("%0x", &color);
+                sk_setred(color);
+                printf("Sent %02hx to the red array\n",color);
                 break;
             case 7:
                 printf("Enter a value (in hex) for the yellow lights:");
-                scanf("%x", &j);
-                sk_setyellow(j);
-                printf("Sent %x to the yellow array\n",j);
+                scanf("%x", &color);
+                sk_setyellow(color);
+                printf("Sent %02hx to the yellow array\n",color);
                 break;
             case 8:
                 printf("Enter a value (in hex) for the green lights:");
-                scanf("%x", &j);
-                sk_setgreen(j);
-                printf("Sent %x to the green array\n",j);
+                scanf("%02hx", &color);
+                sk_setgreen(color);
+                printf("Sent %02hx to the green array\n",color);
                 break;
             case 9:
                 printf("Enter a value (in hex) for the blue lights:");
-                scanf("%x", &j);
-                sk_setblue(j);
-                printf("Sent %x to the blue array\n",j);
+                scanf("%02hx", &color);
+                sk_setblue(color);
+                printf("Sent %x to the blue array\n",color);
                 break;
             case 10:
                 sk_fogon();
@@ -71,6 +72,9 @@ int main()
             case 11:
                 sk_fogoff();
                 printf("Fog disengaged\n");
+                break;
+            case 12:
+                usleep(60000);
                 break;
         }
     }
